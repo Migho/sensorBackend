@@ -4,6 +4,6 @@ const http = require('http')
 
 const server = http.createServer(app)
 
-server.listen(config.PORT, () => {
+server.listen(process.env.PORT || config.PORT, () => {
   console.log(`Server running on port ${config.PORT}`)
 })
